@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Daily Learn</title>
+<style>
+:root{--bg:#fff;--fg:#1a1d24;--muted:#667085;--line:#e4e7ec;--accent:#4f46e5;--card:#f6f7f9}
+@media (prefers-color-scheme:dark){:root{--bg:#16181d;--fg:#eceef2;--muted:#9aa3b2;--line:#2a2e37;--accent:#8b8cff;--card:#1e2128}}
+*{box-sizing:border-box}body{margin:0;width:340px;background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{padding:16px}h1{font-size:15px;margin:0 0 10px;display:flex;align-items:center;gap:8px}h1 img{width:20px;height:20px;border-radius:5px}
+form{display:flex;gap:6px}input{flex:1;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--fg);font:inherit;outline:none}
+input:focus{border-color:var(--accent)}button{border:0;border-radius:9px;padding:9px 13px;background:var(--accent);color:#fff;font:600 13px system-ui;cursor:pointer}
+.sub{color:var(--muted);font-size:12px;margin:14px 0 6px}ul{list-style:none;margin:0;padding:0}li a{display:block;padding:7px 9px;border-radius:7px;color:inherit;text-decoration:none;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+li a:hover{background:var(--card)}.row{display:flex;gap:6px;margin-top:10px}.ghost{background:var(--card);color:var(--fg);border:1px solid var(--line);flex:1}
+</style></head><body><div class="wrap">
+<h1><img src="icons/icon48.png" alt="">Daily Learn</h1>
+<form id="f"><input id="t" placeholder="What do you want to learn?" autofocus autocomplete="off"><button>Go</button></form>
+<div class="row"><button class="ghost" id="surprise" type="button">Surprise me</button><button class="ghost" id="open" type="button">Open app</button></div>
+<div class="sub" id="recentLabel" hidden>Recent briefings</div><ul id="recent"></ul>
+</div><script type="module" src="popup.js"></script></body></html>
